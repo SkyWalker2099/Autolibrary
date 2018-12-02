@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.heshiming.zhangzhihao.chenlei.autolibrary", appContext.getPackageName());
+        assertEquals("com.heshiming.zhangzhihao.cl.autolibrary", appContext.getPackageName());
     }
 }
