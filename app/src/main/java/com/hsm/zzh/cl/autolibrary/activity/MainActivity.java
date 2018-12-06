@@ -1,6 +1,7 @@
-package com.hsm.zzh.cl.autolibrary;
+package com.hsm.zzh.cl.autolibrary.activity;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -13,18 +14,24 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.hsm.zzh.cl.autolibrary.R;
 import com.hsm.zzh.cl.autolibrary.adapter.MainViewPagerAdapter;
+import com.hsm.zzh.cl.autolibrary.fragment.CommunityFragment;
 import com.hsm.zzh.cl.autolibrary.fragment.MapFragment;
+import com.hsm.zzh.cl.autolibrary.fragment.UserFragment;
 import com.hsm.zzh.cl.autolibrary.view.MainNavItem;
 import com.hsm.zzh.cl.autolibrary.view.NoScrollViewPager;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private NoScrollViewPager view_viewPager;
-    private int NavItemNum = 4;
+    private int NavItemNum = 3;
     private MainNavItem[] view_NavItemList = new MainNavItem[NavItemNum];
+    private MainNavItem view_ScannerItem;
 
     private MapFragment mapFragment = new MapFragment();
+    private UserFragment userFragment = new UserFragment();
+    private CommunityFragment communityFragment = new CommunityFragment();
 
 
     @Override
@@ -35,11 +42,12 @@ public class MainActivity extends AppCompatActivity {
         view_NavItemList[0] = (MainNavItem) findViewById(R.id.item_1);
         view_NavItemList[1] = (MainNavItem) findViewById(R.id.item_2);
         view_NavItemList[2] = (MainNavItem) findViewById(R.id.item_3);
-        view_NavItemList[3] = (MainNavItem) findViewById(R.id.item_4);
+        view_ScannerItem = (MainNavItem) findViewById(R.id.item_scanner);
+        view_ScannerItem.setOnClickListener(this);
 
         view_viewPager.setNoScroll(true);
         mainViewPagerAdapter = new MainViewPagerAdapter(this.getSupportFragmentManager()
-                , new Fragment[]{mapFragment, new Fragment(), new Fragment(), new Fragment()}
+                , new Fragment[]{mapFragment, communityFragment, userFragment}
                 , this);
         view_viewPager.setAdapter(mainViewPagerAdapter);
         view_viewPager.setOffscreenPageLimit(3);
@@ -52,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 pagerSelect(position);
-                Log.i("位置", "onPageSelected: "+position);
+                Log.i("位置", "onPageSelected: " + position);
             }
 
             @Override
@@ -70,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+
+        pagerSelect(0);
     }
 
 
@@ -83,11 +93,23 @@ public class MainActivity extends AppCompatActivity {
         view_viewPager.setCurrentItem(i);
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.item_scanner: {
+                final Intent intent = new Intent(this, ScannerActivity.class);
+                startActivity(intent);
+                break;
+            }
+        }
+    }
+
     private void askPermission() {
         String[] permissions = {
                 Manifest.permission.WRITE_EXTERNAL_STORAGE,
                 "android.permission.READ_PHONE_STATE",
-                "android.permission.ACCESS_COARSE_LOCATION"
+                "android.permission.ACCESS_COARSE_LOCATION",
+                "android.permission.CAMERA"
         };
         for (String permission : permissions) {
             if (ContextCompat.checkSelfPermission(this, permission)
@@ -131,4 +153,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
     }
+
+
 }

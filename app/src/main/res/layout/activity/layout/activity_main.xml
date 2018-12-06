@@ -32,8 +32,8 @@
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
                 app:hint_text="xxx"
-                app:no_selected_image="@color/colorPrimary"
-                app:selected_image="@color/colorAccent"/>
+                app:no_selected_image="@drawable/locate_off"
+                app:selected_image="@drawable/locate_on"/>
             <com.hsm.zzh.cl.autolibrary.view.MainNavItem
                 android:id="@+id/item_2"
                 android:layout_width="0dp"
@@ -41,8 +41,17 @@
                 android:layout_weight="0.25"
                 android:gravity="center_horizontal"
                 app:hint_text="xxx"
-                app:no_selected_image="@color/colorPrimary"
-                app:selected_image="@color/colorAccent"/>
+                app:no_selected_image="@drawable/book_off"
+                app:selected_image="@drawable/book_on"/>
+            <com.hsm.zzh.cl.autolibrary.view.MainNavItem
+                android:id="@+id/item_scanner"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:gravity="center_horizontal"
+                app:hint_text="xxx"
+                app:no_selected_image="@drawable/scanner_off"
+                app:selected_image="@drawable/scanner_on"/>
             <com.hsm.zzh.cl.autolibrary.view.MainNavItem
                 android:id="@+id/item_3"
                 android:layout_width="0dp"
@@ -50,17 +59,8 @@
                 android:layout_weight="0.25"
                 android:gravity="center_horizontal"
                 app:hint_text="xxx"
-                app:no_selected_image="@color/colorPrimary"
-                app:selected_image="@color/colorAccent"/>
-            <com.hsm.zzh.cl.autolibrary.view.MainNavItem
-                android:id="@+id/item_4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.25"
-                android:gravity="center_horizontal"
-                app:hint_text="xxx"
-                app:no_selected_image="@color/colorPrimary"
-                app:selected_image="@color/colorAccent"/>
+                app:no_selected_image="@drawable/user_off"
+                app:selected_image="@drawable/user_on"/>
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </RelativeLayout>
