@@ -1,5 +1,6 @@
 package com.hsm.zzh.cl.autolibrary.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,6 +12,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.hsm.zzh.cl.autolibrary.R;
+import com.hsm.zzh.cl.autolibrary.activity.LoginActivity;
+
+import cn.bmob.v3.BmobUser;
 
 public class UserFragment extends Fragment implements View.OnClickListener{
 
@@ -46,7 +50,7 @@ public class UserFragment extends Fragment implements View.OnClickListener{
         return view;
     }
 
-    public void init_view(){
+    private void init_view(){
 
         view_userAccount.setOnClickListener(this);
         view_login.setOnClickListener(this);
@@ -56,13 +60,26 @@ public class UserFragment extends Fragment implements View.OnClickListener{
         view_about.setOnClickListener(this);
         view_service.setOnClickListener(this);
         view_logout.setOnClickListener(this);
+
+        check_login();
+    }
+
+    private void check_login(){
+        if(BmobUser.isLogin()){
+            group_HasLogin.setVisibility(View.VISIBLE);
+            group_NoLogin.setVisibility(View.INVISIBLE);
+        }else{
+            group_HasLogin.setVisibility(View.INVISIBLE);
+            group_NoLogin.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.login:{
-
+                Intent intent = new Intent(getContext(), LoginActivity.class);
+                startActivity(intent);
                 break;
             }
         }

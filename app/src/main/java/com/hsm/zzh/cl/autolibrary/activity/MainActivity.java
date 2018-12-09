@@ -22,6 +22,8 @@ import com.hsm.zzh.cl.autolibrary.fragment.UserFragment;
 import com.hsm.zzh.cl.autolibrary.view.MainNavItem;
 import com.hsm.zzh.cl.autolibrary.view.NoScrollViewPager;
 
+import cn.bmob.v3.Bmob;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private NoScrollViewPager view_viewPager;
@@ -38,6 +40,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Bmob.initialize(this, "984af1c7e81a96a2afb05e32a83653c6");
+
         view_viewPager = (NoScrollViewPager) findViewById(R.id.viewpager);
         view_NavItemList[0] = (MainNavItem) findViewById(R.id.item_1);
         view_NavItemList[1] = (MainNavItem) findViewById(R.id.item_2);
@@ -56,13 +61,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
             }
-
             @Override
             public void onPageSelected(int position) {
                 pagerSelect(position);
                 Log.i("位置", "onPageSelected: " + position);
             }
-
             @Override
             public void onPageScrollStateChanged(int state) {
             }

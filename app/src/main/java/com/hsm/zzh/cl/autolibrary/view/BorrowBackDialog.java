@@ -5,7 +5,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
@@ -35,8 +34,8 @@ public class BorrowBackDialog extends Dialog {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_dialog_borrow_back);
-        Log.i("测试dialog", "onCreate: "+"lala");
 
+        //在代码中设定弹窗的大小，在xml有设置，但是显示出来的失效了
         Window win = getWindow();
         WindowManager.LayoutParams lp = win.getAttributes();
         lp.gravity = Gravity.BOTTOM;

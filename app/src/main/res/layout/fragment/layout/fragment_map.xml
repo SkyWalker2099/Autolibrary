@@ -19,9 +19,11 @@
 
             <EditText
                 android:id="@+id/search"
-                style="@android:style/Widget.Material.Light.TextView"
+                android:background="#ffffff"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:padding="3dp"
+                android:layout_marginStart="3dp"
                 android:layout_toStartOf="@+id/search_image" />
 
             <ImageView
