@@ -1,5 +1,6 @@
 package com.hsm.zzh.cl.autolibrary.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -68,6 +69,11 @@ public class LoginActivity extends AppCompatActivity {
                     return ;
                 }
                 Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+                //返回成功信息给上一个页面
+                Intent intent = new Intent();
+                intent.putExtra("login_result", true);
+                setResult(RESULT_OK, intent);
+                finish();
             }
         });
     }

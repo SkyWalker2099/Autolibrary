@@ -1,5 +1,6 @@
 package com.hsm.zzh.cl.autolibrary.fragment;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,6 +14,9 @@ import android.widget.TextView;
 
 import com.hsm.zzh.cl.autolibrary.R;
 import com.hsm.zzh.cl.autolibrary.activity.LoginActivity;
+import com.hsm.zzh.cl.autolibrary.activity.RegisterActivity;
+import com.hsm.zzh.cl.autolibrary.info_api.MyUser;
+import com.hsm.zzh.cl.autolibrary.info_api.UserOperation;
 
 import cn.bmob.v3.BmobUser;
 
@@ -64,22 +68,56 @@ public class UserFragment extends Fragment implements View.OnClickListener{
         check_login();
     }
 
+    private MyUser curUser = null;
+
     private void check_login(){
         if(BmobUser.isLogin()){
             group_HasLogin.setVisibility(View.VISIBLE);
             group_NoLogin.setVisibility(View.INVISIBLE);
+
+            curUser = BmobUser.getCurrentUser(MyUser.class);
+            view_userAccount.setText(curUser.getUsername());
+
         }else{
             group_HasLogin.setVisibility(View.INVISIBLE);
             group_NoLogin.setVisibility(View.VISIBLE);
         }
     }
 
+    private final int LOGIN_CODE = 1;
+    private final int REGISTER_CODE = 2;
     @Override
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.login:{
                 Intent intent = new Intent(getContext(), LoginActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent,  LOGIN_CODE);
+                break;
+            }
+            case R.id.register:{
+                Intent intent = new Intent(getContext(), RegisterActivity.class);
+                startActivityForResult(intent, REGISTER_CODE);
+                break;
+            }
+            case R.id.logout:{
+                UserOperation.login_out();
+                check_login();
+                break;
+            }
+        }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(resultCode != Activity.RESULT_OK){
+            return ;
+        }
+        switch(requestCode){
+            case LOGIN_CODE:{
+                check_login();
+                break;
+            }case REGISTER_CODE:{
+                check_login();
                 break;
             }
         }

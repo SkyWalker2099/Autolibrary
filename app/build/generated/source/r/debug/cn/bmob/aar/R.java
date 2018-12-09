@@ -39,7 +39,7 @@ public final class R {
         public static final int bmob_update_wifi_indicator = 0x7f080029;
     }
     public static final class layout {
-        public static final int bmob_update_dialog = 0x7f0a0021;
+        public static final int bmob_update_dialog = 0x7f0a0022;
     }
     public static final class string {
         public static final int BMAppUpdate = 0x7f0c0000;

@@ -22,6 +22,7 @@ public class BookListViewAdapter extends BaseAdapter<Book, BookListViewAdapter.B
         TextView viewDesc;
         TextView viewAuthor;
         TextView viewType;
+        TextView viewId;
         View viewItemView;
 
         public BookViewHolder(View view) {
@@ -33,6 +34,7 @@ public class BookListViewAdapter extends BaseAdapter<Book, BookListViewAdapter.B
             viewDesc = (TextView) view.findViewById(R.id.book_short_desc);
             viewAuthor = (TextView) view.findViewById(R.id.book_author);
             viewType = (TextView) view.findViewById(R.id.book_type);
+            viewId = (TextView) view.findViewById(R.id.book_id);
             viewItemView = view;
         }
     }
@@ -68,6 +70,8 @@ public class BookListViewAdapter extends BaseAdapter<Book, BookListViewAdapter.B
         holder.viewAuthor.setText(book.getAuthor());
         holder.viewTitle.setText(book.getTitle());
         holder.viewDesc.setText(book.getShortdesc());
+        String temp = ""+book.getId(); //强迫症
+        holder.viewId.setText(temp);
 
         Glide.with(context).load(book.getPic_url()).into(holder.viewImage);
         holder.itemView.setOnClickListener(new View.OnClickListener() {

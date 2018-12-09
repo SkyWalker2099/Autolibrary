@@ -412,6 +412,10 @@
         "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/layout/fragment/layout/fragment_community.xml"
     },
     {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/mipmap-hdpi_banner1.jpeg.flat",
+        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/mipmap-hdpi/banner1.jpeg"
+    },
+    {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/color-v23_abc_tint_spinner.xml.flat",
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/color-v23/abc_tint_spinner.xml"
     },
@@ -790,6 +794,10 @@
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/mipmap-hdpi_banner2.jpeg.flat",
+        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/mipmap-hdpi/banner2.jpeg"
     },
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
@@ -1456,6 +1464,10 @@
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_36dp.png"
     },
     {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/mipmap-hdpi_banner3.jpeg.flat",
+        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/mipmap-hdpi/banner3.jpeg"
+    },
+    {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable_bmob_update_button_ok_bg_tap.xml.flat",
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/bmob-sdk-3.6.8-rc3.aar/6af6d180b025b7c332a125216c78206c/res/drawable/bmob_update_button_ok_bg_tap.xml"
     },
@@ -1950,6 +1962,10 @@
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable_bmob_update_wifi_disable.png.flat",
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/bmob-sdk-3.6.8-rc3.aar/6af6d180b025b7c332a125216c78206c/res/drawable/bmob_update_wifi_disable.png"
+    },
+    {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/layout_activity_register.xml.flat",
+        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/layout/activity/layout/activity_register.xml"
     },
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/layout_fragment_user.xml.flat",

@@ -8,7 +8,9 @@ import android.view.MotionEvent;
 
 //自定义viewpager类,不会拦截滑动事件,也就是 禁止滑动的viewpager
 public class NoScrollViewPager extends ViewPager {
-    private boolean noScroll = false;
+
+    private boolean noScroll = false;   //是否可以滑动
+    private boolean noAnimation = true;     //item切换是否有动画过渡
 
     public NoScrollViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -53,6 +55,10 @@ public class NoScrollViewPager extends ViewPager {
 
     @Override
     public void setCurrentItem(int item) {
-        super.setCurrentItem(item);
+        //指定第二个参数为false,去除item切换时的动画效果
+        if(noAnimation)
+            super.setCurrentItem(item, false);
+        else
+            super.setCurrentItem(item);
     }
 }

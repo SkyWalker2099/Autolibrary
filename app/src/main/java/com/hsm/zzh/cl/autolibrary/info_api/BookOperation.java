@@ -32,7 +32,7 @@ public class BookOperation {
         query.addWhereDoesNotExists("now_user");
         query.addWhereExists("now_machine");
         query.addWhereEqualTo("objectId", book_id);
-
+        query.setCachePolicy(BmobQuery.CachePolicy.CACHE_ELSE_NETWORK);
         query.findObjects(new FindListener<Book>() {
 
             @Override
@@ -65,6 +65,7 @@ public class BookOperation {
         BmobQuery<Book> query = new BmobQuery<>();
         query.addWhereExists("now_user");
         query.addWhereDoesNotExists("now_machine");
+        query.setCachePolicy(BmobQuery.CachePolicy.CACHE_ELSE_NETWORK);
         query.getObject(book_id, new QueryListener<Book>() {
             @Override
             public void done(Book book, BmobException e) {
@@ -90,6 +91,7 @@ public class BookOperation {
         machine.setObjectId(machine_id);
 //        machine.setObjectId("d44d67ab96");
         query.addWhereEqualTo("now_machine",new BmobPointer(machine));
+        query.setCachePolicy(BmobQuery.CachePolicy.CACHE_ELSE_NETWORK);
         query.findObjects(findListener);
 
     }   //  一个机器里的书籍
@@ -101,10 +103,11 @@ public class BookOperation {
      */
     public static void Books_by_your_location(BmobGeoPoint bmobGeoPoint, SQLQueryListener<Book> sqlQueryListener){
 
-        String bql = "select * from Book where now_machine in (select * from Machine where location near ["+Double.toString(bmobGeoPoint.getLongitude())+","+Double.toString(bmobGeoPoint.getLatitude())+"] max 0.5  km)";
+        String bql = "select * from Book where now_machine in (select * from Machine where location near ["+Double.toString(bmobGeoPoint.getLongitude())+","+Double.toString(bmobGeoPoint.getLatitude())+"] max 2  km)";
         BmobQuery<Book> query = new BmobQuery<>();
         query.setSQL(bql);
         query.setPreparedParams(new Object[]{bmobGeoPoint.getLatitude(), bmobGeoPoint.getLongitude()});
+        query.setCachePolicy(BmobQuery.CachePolicy.CACHE_ELSE_NETWORK);
         query.doSQLQuery(sqlQueryListener);
 
     }
@@ -132,6 +135,7 @@ public class BookOperation {
 
         BmobQuery<Book> mainQuery = new BmobQuery<>();
         mainQuery.or(queries);
+        mainQuery.setCachePolicy(BmobQuery.CachePolicy.CACHE_ELSE_NETWORK);
         mainQuery.findObjects(findListener);
 
     }

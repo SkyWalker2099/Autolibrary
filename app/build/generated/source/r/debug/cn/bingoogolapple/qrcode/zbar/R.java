@@ -46,11 +46,11 @@ public final class R {
     public static final class id {
         public static final int bgaqrcode_camera_preview = 0x7f080022;
         public static final int center = 0x7f080037;
-        public static final int inside = 0x7f08006f;
+        public static final int inside = 0x7f080070;
     }
     public static final class mipmap {
-        public static final int qrcode_default_grid_scan_line = 0x7f0b0002;
-        public static final int qrcode_default_scan_line = 0x7f0b0003;
+        public static final int qrcode_default_grid_scan_line = 0x7f0b0005;
+        public static final int qrcode_default_scan_line = 0x7f0b0006;
     }
     public static final class styleable {
         public static final int[] QRCodeView = { 0x7f03011e, 0x7f03011f, 0x7f030120, 0x7f030121, 0x7f030122, 0x7f030123, 0x7f030124, 0x7f030125, 0x7f030126, 0x7f030127, 0x7f030128, 0x7f030129, 0x7f03012a, 0x7f03012b, 0x7f03012c, 0x7f03012d, 0x7f03012e, 0x7f03012f, 0x7f030130, 0x7f030131, 0x7f030132, 0x7f030133, 0x7f030134, 0x7f030135, 0x7f030136, 0x7f030137, 0x7f030138, 0x7f030139, 0x7f03013a, 0x7f03013b, 0x7f03013c, 0x7f03013d, 0x7f03013e, 0x7f03013f };

@@ -67,20 +67,19 @@ public class CommunityFragment extends Fragment {
             @Override
             public void displayImage(Context context, Object path, ImageView imageView) {
                 imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                Glide.with(getContext()).load(Integer.parseInt((String) path)).into(imageView);
+                Glide.with(getContext()).load((int) path).into(imageView);
             }
         });
     }
 
 
     private List<Book> bookList = new ArrayList<>();
-    private List<String> bannerPicList = new ArrayList<>();
+    private List<Integer> bannerPicList = new ArrayList<>();
     private BookListViewAdapter bookListViewAdapter;
 
     private SharedPreferences sp;
 
     private void getBookInfo() {
-        // TODO: 18-12-5
         double longitude = Double.parseDouble(sp.getString("location_longitude", "-1"));
         double latitude = Double.parseDouble(sp.getString("location_latitude", "-1"));
         BookOperation.Books_by_your_location(new BmobGeoPoint(longitude, latitude), new SQLQueryListener<Book>() {
@@ -88,7 +87,6 @@ public class CommunityFragment extends Fragment {
             public void done(BmobQueryResult<Book> bmobQueryResult, BmobException e) {
                 if (e == null) {
                     List<Book> bookList = bmobQueryResult.getResults();
-                    Log.i("book", "done: " + bookList.toString());
                     CommunityFragment.this.bookList.addAll(bookList);
                     bookListViewAdapter.notifyDataSetChanged();
                 }else{
@@ -102,10 +100,9 @@ public class CommunityFragment extends Fragment {
     }
 
     private void getBannerPic() {
-        // TODO: 18-12-5
-        bannerPicList.add(R.drawable.locate + "");
-        bannerPicList.add(R.drawable.locate + "");
-        bannerPicList.add(R.drawable.locate + "");
+        bannerPicList.add(R.mipmap.banner1);
+        bannerPicList.add(R.mipmap.banner2);
+        bannerPicList.add(R.mipmap.banner3);
 
         banner.setImages(bannerPicList);
         banner.setDelayTime(2000);

@@ -64,6 +64,9 @@
         <activity
             android:name="com.hsm.zzh.cl.autolibrary.activity.LoginActivity"
             android:label="登录" />
+        <activity
+            android:name="com.hsm.zzh.cl.autolibrary.activity.RegisterActivity"
+            android:label="注册" />
 
         <meta-data
             android:name="android.support.VERSION"

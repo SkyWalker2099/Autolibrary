@@ -137,7 +137,6 @@ public class MapFragment extends Fragment  implements View.OnClickListener {
                 editor.putString("location_longitude", ""+location.getLongitude());
                 editor.putString("location_latitude",""+location.getLatitude());
                 editor.apply();
-
                 getMachinesByLocation();
             }
         });

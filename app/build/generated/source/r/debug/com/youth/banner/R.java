@@ -42,18 +42,18 @@ public final class R {
         public static final int center_crop = 0x7f080038;
         public static final int center_inside = 0x7f08003a;
         public static final int circleIndicator = 0x7f080040;
-        public static final int fit_center = 0x7f08005e;
-        public static final int fit_end = 0x7f08005f;
-        public static final int fit_start = 0x7f080060;
-        public static final int fit_xy = 0x7f080061;
-        public static final int indicatorInside = 0x7f08006d;
-        public static final int matrix = 0x7f080080;
-        public static final int numIndicator = 0x7f080090;
-        public static final int numIndicatorInside = 0x7f080091;
-        public static final int titleView = 0x7f0800d7;
+        public static final int fit_center = 0x7f08005f;
+        public static final int fit_end = 0x7f080060;
+        public static final int fit_start = 0x7f080061;
+        public static final int fit_xy = 0x7f080062;
+        public static final int indicatorInside = 0x7f08006e;
+        public static final int matrix = 0x7f080081;
+        public static final int numIndicator = 0x7f080091;
+        public static final int numIndicatorInside = 0x7f080092;
+        public static final int titleView = 0x7f0800d9;
     }
     public static final class layout {
-        public static final int banner = 0x7f0a0020;
+        public static final int banner = 0x7f0a0021;
     }
     public static final class styleable {
         public static final int[] Banner = { 0x7f030030, 0x7f030031, 0x7f030079, 0x7f0300a5, 0x7f0300a7, 0x7f0300a8, 0x7f0300a9, 0x7f0300aa, 0x7f0300ab, 0x7f0300af, 0x7f03014a, 0x7f0301a0, 0x7f0301a1, 0x7f0301a2, 0x7f0301a3 };

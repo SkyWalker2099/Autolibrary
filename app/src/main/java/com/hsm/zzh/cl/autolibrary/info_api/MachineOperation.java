@@ -1,11 +1,18 @@
 package com.hsm.zzh.cl.autolibrary.info_api;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.security.auth.callback.Callback;
+
+import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.datatype.BmobGeoPoint;
 import cn.bmob.v3.datatype.BmobPointer;
+import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.QueryListener;
 
@@ -18,6 +25,7 @@ public class MachineOperation {
     public static void get_one_machine_buy_id(String id, QueryListener<Machine> queryListener){
 
         BmobQuery<Machine> query = new BmobQuery<>();
+        query.setCachePolicy(BmobQuery.CachePolicy.CACHE_ELSE_NETWORK);
         query.getObject(id,queryListener);
 
     }  // 通过id获取机器
@@ -29,6 +37,7 @@ public class MachineOperation {
     public static void get_machines(FindListener<Machine> findListener){
 
         BmobQuery<Machine> query = new BmobQuery<>();
+        query.setCachePolicy(BmobQuery.CachePolicy.CACHE_ELSE_NETWORK);
         query.findObjects(findListener);
 
     }   //获取所有机器
@@ -45,6 +54,7 @@ public class MachineOperation {
         query.addWhereNear("location",bmobGeoPoint);
 //        query.addWhereEqualTo("location",bmobGeoPoint);
         query.addWhereWithinKilometers("location",bmobGeoPoint,dis);
+        query.setCachePolicy(BmobQuery.CachePolicy.CACHE_ELSE_NETWORK);
         query.findObjects(findListener);
 
     } //获取一个位置附近的机器
@@ -75,6 +85,7 @@ public class MachineOperation {
 
         BmobQuery<Machine> query = new BmobQuery<Machine>();
         query.addWhereContainedIn("objectId",list);
+        query.setCachePolicy(BmobQuery.CachePolicy.CACHE_ELSE_NETWORK);
         query.findObjects(findListener);
 
     }

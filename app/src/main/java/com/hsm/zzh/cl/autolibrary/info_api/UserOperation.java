@@ -91,6 +91,7 @@ public class UserOperation {
 
         MyUser myUser = BmobUser.getCurrentUser(MyUser.class);
         BmobQuery<Book> query = new BmobQuery<>();
+        query.setCachePolicy(BmobQuery.CachePolicy.CACHE_ELSE_NETWORK);
         query.addWhereRelatedTo("history_user", new BmobPointer(myUser));
         query.findObjects(findListener);
 
