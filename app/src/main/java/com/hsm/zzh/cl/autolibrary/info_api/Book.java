@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import cn.bmob.v3.BmobObject;
 import cn.bmob.v3.datatype.BmobRelation;
 
-public class Book extends BmobObject{
+public class Book extends BmobObject {
 
     @SerializedName("id")
     Integer id;                             // 书的id  一般用不上 因为bmob自带 objectid  Book 类里 id改为了 Integer 类型，
@@ -37,13 +37,13 @@ public class Book extends BmobObject{
     @SerializedName("shortdesc")
     String shortdesc;                   // 简介
 
-    private MyUser now_user = null;                 //当前用户
+    private MyUser now_user;                 //当前用户
 
-    private BmobRelation history_user = null;     // 历史用户
+    private BmobRelation history_user;     // 历史用户
 
-    private Machine now_machine = null;        //   当前机器
+    private Machine now_machine;        //   当前机器
 
-    private BmobRelation history_machine = null;   //历史保存在的机器
+    private BmobRelation history_machine;   //历史保存在的机器
 
 
     public MyUser getNow_user() {

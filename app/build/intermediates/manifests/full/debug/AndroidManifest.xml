@@ -19,12 +19,14 @@
     <!-- 允许程序设置内置sd卡的写权限 -->
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!-- 允许程序读写手机状态和身份 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <!-- 摄像头 -->
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
 
     <uses-feature
@@ -51,22 +53,28 @@
 
         <activity
             android:name="com.hsm.zzh.cl.autolibrary.activity.MainActivity"
+            android:launchMode="singleTask"
             android:theme="@style/AppTheme" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name="com.hsm.zzh.cl.autolibrary.activity.ScannerActivity" />
-        <activity android:name="com.hsm.zzh.cl.autolibrary.activity.BorrowActivity" />
-        <activity android:name="com.hsm.zzh.cl.autolibrary.activity.MachineActivity" />
+        <activity android:name="com.hsm.zzh.cl.autolibrary.activity.BookListActivity" />
+        <activity android:name="com.hsm.zzh.cl.autolibrary.activity.BookInfoActivity" />
+        <activity android:name="com.hsm.zzh.cl.autolibrary.activity.BorrowHistoryActivity" />
+        <activity android:name="com.hsm.zzh.cl.autolibrary.activity.ChangeInfoActivity" />
         <activity
             android:name="com.hsm.zzh.cl.autolibrary.activity.LoginActivity"
             android:label="登录" />
         <activity
             android:name="com.hsm.zzh.cl.autolibrary.activity.RegisterActivity"
             android:label="注册" />
+        <activity android:name="com.hsm.zzh.cl.autolibrary.activity.SearchActivity" />
+        <activity android:name="com.hsm.zzh.cl.autolibrary.activity.SplashActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="android.support.VERSION"

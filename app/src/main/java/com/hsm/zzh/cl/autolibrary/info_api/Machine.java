@@ -1,9 +1,9 @@
 package com.hsm.zzh.cl.autolibrary.info_api;
 
 import cn.bmob.v3.BmobObject;
-        import cn.bmob.v3.datatype.BmobGeoPoint;
+import cn.bmob.v3.datatype.BmobGeoPoint;
 
-public class Machine extends BmobObject{
+public class Machine extends BmobObject {
 
     private BmobGeoPoint location; // 地理位置
 
@@ -36,7 +36,7 @@ public class Machine extends BmobObject{
     }
 
     public String repr(){
-        return Double.toString(this.location.getLatitude()) +","+ Double.toString(this.location.getLongitude())+ ",id:"+Integer.toString(id)+" ,"+shortdesc;
+        return Double.toString(this.location.getLatitude()) +","+ Double.toString(this.location.getLongitude())+ ",id:"+ Integer.toString(id)+" ,"+shortdesc;
 
     }
 }

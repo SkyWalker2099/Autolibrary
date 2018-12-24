@@ -1,6 +1,7 @@
 package com.hsm.zzh.cl.autolibrary.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -8,6 +9,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.hsm.zzh.cl.autolibrary.R;
+import com.hsm.zzh.cl.autolibrary.activity.BookInfoActivity;
 import com.hsm.zzh.cl.autolibrary.info_api.Book;
 import com.hsm.zzh.cl.autolibrary.wheel.BaseAdapter;
 
@@ -65,7 +67,7 @@ public class BookListViewAdapter extends BaseAdapter<Book, BookListViewAdapter.B
 
     @Override
     protected void myBindViewHolder(BookViewHolder holder, int position) {
-        Book book = bookList.get(position);
+        final Book book = bookList.get(position);
         holder.viewType.setText(book.getType());
         holder.viewAuthor.setText(book.getAuthor());
         holder.viewTitle.setText(book.getTitle());
@@ -77,7 +79,9 @@ public class BookListViewAdapter extends BaseAdapter<Book, BookListViewAdapter.B
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: 18-12-5
+                Intent intent = new Intent(context, BookInfoActivity.class);
+                intent.putExtra("selected_book", book);
+                context.startActivity(intent);
             }
         });
     }

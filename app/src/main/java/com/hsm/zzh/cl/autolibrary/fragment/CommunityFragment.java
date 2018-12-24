@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -36,12 +37,14 @@ public class CommunityFragment extends Fragment {
     private RecyclerView view_recyclerView;
     private Banner banner;
     private View viewHeader;
+    private TextView viewShowZero;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_community, container, false);
         view_recyclerView = (RecyclerView) view.findViewById(R.id.book_list);
+        viewShowZero = (TextView) view.findViewById(R.id.show_zero);
 
         sp = getActivity().getSharedPreferences("app", Context.MODE_PRIVATE);
 
@@ -87,8 +90,16 @@ public class CommunityFragment extends Fragment {
             public void done(BmobQueryResult<Book> bmobQueryResult, BmobException e) {
                 if (e == null) {
                     List<Book> bookList = bmobQueryResult.getResults();
+
                     CommunityFragment.this.bookList.addAll(bookList);
                     bookListViewAdapter.notifyDataSetChanged();
+                    if(bookList.size() == 0){
+//                        view_recyclerView.setVisibility(View.GONE);
+                        viewShowZero.setVisibility(View.VISIBLE);
+                    }else{
+//                        view_recyclerView.setVisibility(View.VISIBLE);
+                        viewShowZero.setVisibility(View.GONE);
+                    }
                 }else{
                     Log.e("book", "done: " + e.getMessage());
                     Toast.makeText(getContext(), "出现错误", Toast.LENGTH_SHORT)

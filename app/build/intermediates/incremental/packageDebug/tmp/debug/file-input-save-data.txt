@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Dec 07 23:58:00 CST 2018
+#Wed Dec 19 21:28:07 CST 2018
 17.baseType=DIRECTORY
 4.path=lib/mips/libzbarjni.so
 8.set=NATIVE_RESOURCE

@@ -52,6 +52,10 @@
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/layout_search_item.xml.flat",
+        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/layout/item/layout/search_item.xml"
+    },
+    {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/layout_view_main_nav_item.xml.flat",
         "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/layout/view/layout/view_main_nav_item.xml"
     },
@@ -98,6 +102,10 @@
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/anim_abc_slide_in_top.xml.flat",
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable_border_radiu.xml.flat",
+        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/drawable/border_radiu.xml"
     },
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
@@ -210,6 +218,10 @@
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/layout_activity_search.xml.flat",
+        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/layout/activity/layout/activity_search.xml"
     },
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/color_abc_primary_text_material_light.xml.flat",
@@ -328,6 +340,10 @@
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/color/abc_primary_text_disable_only_material_light.xml"
     },
     {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable_account_balance.png.flat",
+        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/drawable/account_balance.png"
+    },
+    {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
@@ -390,6 +406,10 @@
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_longpressed_holo.9.png.flat",
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-xhdpi-v4/abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/layout_activity_splash.xml.flat",
+        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/layout/activity/layout/activity_splash.xml"
     },
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/layout-v21_notification_template_icon_group.xml.flat",
@@ -484,6 +504,10 @@
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-xxxhdpi-v4/abc_ic_star_black_48dp.png"
     },
     {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/layout_activity_borrow_history.xml.flat",
+        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/layout/activity/layout/activity_borrow_history.xml"
+    },
+    {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-hdpi-v4/abc_popup_background_mtrl_mult.9.png"
     },
@@ -516,12 +540,12 @@
         "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
-        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/drawable/ic_launcher_background.xml"
-    },
-    {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal.9.png.flat",
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-hdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/drawable/ic_launcher_background.xml"
     },
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/layout_abc_screen_simple.xml.flat",
@@ -576,16 +600,16 @@
         "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/layout/fragment/layout/fragment_scanner.xml"
     },
     {
-        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
-        "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_design_ic_visibility_off.png.flat",
+        "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/design-25.4.0.aar/2924c4f0434652a20b7534daa28107d6/res/drawable-hdpi-v4/design_ic_visibility_off.png"
     },
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
-        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_design_ic_visibility_off.png.flat",
-        "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/design-25.4.0.aar/2924c4f0434652a20b7534daa28107d6/res/drawable-hdpi-v4/design_ic_visibility_off.png"
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
+        "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
@@ -622,10 +646,6 @@
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/anim_abc_fade_in.xml.flat",
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/anim/abc_fade_in.xml"
-    },
-    {
-        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/layout_activity_machine.xml.flat",
-        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/layout/activity/layout/activity_machine.xml"
     },
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
@@ -688,6 +708,14 @@
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/layout_activity_book_info.xml.flat",
+        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/layout/activity/layout/activity_book_info.xml"
+    },
+    {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable_radius.xml.flat",
+        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/drawable/radius.xml"
+    },
+    {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-xhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png"
     },
@@ -706,6 +734,10 @@
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable_btn.xml.flat",
         "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/drawable/btn.xml"
+    },
+    {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/layout_popup_choose_image.xml.flat",
+        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/layout/view/layout/popup_choose_image.xml"
     },
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_black_16dp.png.flat",
@@ -926,6 +958,10 @@
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-xhdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/layout_activity_booklist.xml.flat",
+        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/layout/activity/layout/activity_booklist.xml"
     },
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
@@ -1372,6 +1408,10 @@
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-v21/abc_action_bar_item_background_material.xml"
     },
     {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_splash.jpg.flat",
+        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/mipmap-xxxhdpi/splash.jpg"
+    },
+    {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },
@@ -1406,10 +1446,6 @@
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/layout-v11_notification_media_action.xml.flat",
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/layout-v11/notification_media_action.xml"
-    },
-    {
-        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/layout_activity_borrow.xml.flat",
-        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/layout/activity/layout/activity_borrow.xml"
     },
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/layout_notification_template_lines_media.xml.flat",
@@ -1476,12 +1512,12 @@
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/layout/abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
-        "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-xxxhdpi-v4/abc_text_select_handle_left_mtrl_light.png"
-    },
-    {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable_login_lock.png.flat",
         "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/drawable/login_lock.png"
+    },
+    {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
+        "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-xxxhdpi-v4/abc_text_select_handle_left_mtrl_light.png"
     },
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
@@ -1572,6 +1608,10 @@
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
     },
     {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/layout_book_info.xml.flat",
+        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/layout/activity/layout/book_info.xml"
+    },
+    {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-xhdpi-v4/abc_text_select_handle_middle_mtrl_dark.png"
     },
@@ -1618,6 +1658,10 @@
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/layout_history_item.xml.flat",
+        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/layout/item/layout/history_item.xml"
     },
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable_abc_dialog_material_background.xml.flat",
@@ -1808,6 +1852,10 @@
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_light.png"
     },
     {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable_books.png.flat",
+        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/drawable/books.png"
+    },
+    {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable_abc_btn_check_material.xml.flat",
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable/abc_btn_check_material.xml"
     },
@@ -1874,6 +1922,10 @@
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_star_half_black_16dp.png.flat",
         "source": "/home/chenlei/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/bc3440eb0c29f026530d4c276375bd9d/res/drawable-hdpi-v4/abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/layout_activity_change_info.xml.flat",
+        "source": "/home/chenlei/code/android/GitHub/AutoLibrary/app/src/main/res/layout/activity/layout/activity_change_info.xml"
     },
     {
         "merged": "/home/chenlei/code/android/GitHub/AutoLibrary/app/build/intermediates/res/merged/debug/drawable_locate_on.png.flat",

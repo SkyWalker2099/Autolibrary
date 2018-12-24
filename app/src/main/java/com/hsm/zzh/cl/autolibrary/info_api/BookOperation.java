@@ -48,9 +48,41 @@ public class BookOperation {
             }
         });
 
+    }
 
 
+    /**     新的借书接口，使用的Callback接口，建议用这个
+     * @param book_id   书本objectid
+     * @param callback  回调函数接口
+     */
+    public static void Borrow_book_new(String book_id, final Callback callback){
 
+        final MyUser myUser = BmobUser.getCurrentUser(MyUser.class);
+
+        BmobQuery<Book> query = new BmobQuery<>();
+        query.addWhereDoesNotExists("now_user");
+        query.addWhereExists("now_machine");
+        query.addWhereEqualTo("objectId", book_id);
+        query.setCachePolicy(BmobQuery.CachePolicy.CACHE_ELSE_NETWORK);
+        query.findObjects(new FindListener<Book>() {
+
+            @Override
+            public void done(List<Book> list, BmobException e) {
+                if(e != null || list.size() == 0){
+//                    Book book = new Book();
+//                    book.setObjectId("");
+//                    Borrow_Return.borrow(book, myUser,updateListener);
+                    if(e == null){
+                        e = new BmobException();
+                    }
+                    callback.onFail(e);
+                }else {
+
+                    Borrow_Return.borrow1(list.get(0), myUser, callback);
+                }
+
+            }
+        });
 
     }
 
@@ -80,6 +112,38 @@ public class BookOperation {
     }
 
 
+    /**   还书的新接口，建议用这个
+     * @param book_id 书本objectid
+     * @param machine_id   机器objectid
+     * @param callback  回调函数
+     */
+    public static void Return_book_new(String book_id, final String machine_id, final Callback callback){
+
+        BmobQuery<Book> query = new BmobQuery<>();
+        query.addWhereExists("now_user");
+        query.addWhereDoesNotExists("now_machine");
+        query.setCachePolicy(BmobQuery.CachePolicy.CACHE_ELSE_NETWORK);
+        query.getObject(book_id, new QueryListener<Book>() {
+            @Override
+            public void done(Book book, BmobException e) {
+                if(e != null || book == null){
+                     if(e == null){
+                         e = new BmobException();
+                     }
+                     callback.onFail(e);
+                }else {
+                    Borrow_Return.Return1(machine_id,book,callback);
+                }
+
+            }
+        });
+
+    }
+
+
+
+
+
     /** 获取一个机器里的书
      * @param machine_id   机器 objectid
      * @param findListener
@@ -89,12 +153,15 @@ public class BookOperation {
         BmobQuery<Book> query = new BmobQuery<>();
         Machine machine = new Machine();
         machine.setObjectId(machine_id);
-//        machine.setObjectId("d44d67ab96");
         query.addWhereEqualTo("now_machine",new BmobPointer(machine));
-        query.setCachePolicy(BmobQuery.CachePolicy.CACHE_ELSE_NETWORK);
+        query.setCachePolicy(BmobQuery.CachePolicy.NETWORK_ELSE_CACHE);
         query.findObjects(findListener);
 
     }   //  一个机器里的书籍
+
+
+
+
 
 
     /** 按位置附近 0.5 km 内机器里的书籍
@@ -103,7 +170,7 @@ public class BookOperation {
      */
     public static void Books_by_your_location(BmobGeoPoint bmobGeoPoint, SQLQueryListener<Book> sqlQueryListener){
 
-        String bql = "select * from Book where now_machine in (select * from Machine where location near ["+Double.toString(bmobGeoPoint.getLongitude())+","+Double.toString(bmobGeoPoint.getLatitude())+"] max 2  km)";
+        String bql = "select * from Book where now_machine in (select * from Machine where location near ["+ Double.toString(bmobGeoPoint.getLongitude())+","+ Double.toString(bmobGeoPoint.getLatitude())+"] max 1  km)";
         BmobQuery<Book> query = new BmobQuery<>();
         query.setSQL(bql);
         query.setPreparedParams(new Object[]{bmobGeoPoint.getLatitude(), bmobGeoPoint.getLongitude()});

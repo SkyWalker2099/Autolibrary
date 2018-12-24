@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.hsm.zzh.cl.autolibrary.R;
 import com.hsm.zzh.cl.autolibrary.info_api.MyUser;
 import com.hsm.zzh.cl.autolibrary.info_api.UserOperation;
+import com.hsm.zzh.cl.autolibrary.wheel.Pending;
 
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
@@ -55,6 +56,10 @@ public class LoginActivity extends AppCompatActivity {
         String pwd = viewEditPwd.getText().toString();
         if(account.equals("") || pwd.equals(""))
             return ;
+
+        final Pending pending = new Pending(this);
+        pending.showProgressDialog();
+
         UserOperation.sign_in(account, pwd, new SaveListener<MyUser>() {
             @Override
             public void done(MyUser myUser, BmobException e) {
@@ -66,14 +71,15 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this, "发生位未知错误", Toast.LENGTH_SHORT)
                                 .show();
                     }
-                    return ;
+                }else {
+                    Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+                    //返回成功信息给上一个页面
+                    Intent intent = new Intent();
+                    intent.putExtra("login_result", true);
+                    setResult(RESULT_OK, intent);
+                    finish();
                 }
-                Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
-                //返回成功信息给上一个页面
-                Intent intent = new Intent();
-                intent.putExtra("login_result", true);
-                setResult(RESULT_OK, intent);
-                finish();
+                pending.closeProgressDialog();
             }
         });
     }

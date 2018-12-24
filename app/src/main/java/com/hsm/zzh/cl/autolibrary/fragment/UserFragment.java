@@ -13,11 +13,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.hsm.zzh.cl.autolibrary.R;
+import com.hsm.zzh.cl.autolibrary.activity.BorrowHistoryActivity;
+import com.hsm.zzh.cl.autolibrary.activity.ChangeInfoActivity;
 import com.hsm.zzh.cl.autolibrary.activity.LoginActivity;
 import com.hsm.zzh.cl.autolibrary.activity.RegisterActivity;
 import com.hsm.zzh.cl.autolibrary.info_api.MyUser;
 import com.hsm.zzh.cl.autolibrary.info_api.UserOperation;
 
+import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.BmobUser;
 
 public class UserFragment extends Fragment implements View.OnClickListener{
@@ -28,7 +31,8 @@ public class UserFragment extends Fragment implements View.OnClickListener{
     private TextView view_userAccount;
     private TextView view_login;
     private TextView view_register;
-    private TextView view_record;
+    private TextView view_showBalance;
+    private View view_record;
     private TextView view_changeInfo;
     private CardView view_about;
     private CardView view_service;
@@ -44,11 +48,12 @@ public class UserFragment extends Fragment implements View.OnClickListener{
         view_login = (TextView) view.findViewById(R.id.login);
 
         view_register = (TextView) view.findViewById(R.id.register);
-        view_record = (TextView) view.findViewById(R.id.record);
+        view_record = (View) view.findViewById(R.id.record);
         view_changeInfo = (TextView) view.findViewById(R.id.change_info);
         view_about = (CardView) view.findViewById(R.id.card_about);
         view_service = (CardView) view.findViewById(R.id.card_service);
         view_logout = (Button) view.findViewById(R.id.logout);
+        view_showBalance = (TextView) view.findViewById(R.id.show_balance);
 
         init_view();
         return view;
@@ -78,7 +83,10 @@ public class UserFragment extends Fragment implements View.OnClickListener{
             curUser = BmobUser.getCurrentUser(MyUser.class);
             view_userAccount.setText(curUser.getUsername());
 
+            String temp = "余额："+curUser.getAccount_balance();
+            view_showBalance.setText(temp);
         }else{
+            curUser = null;
             group_HasLogin.setVisibility(View.INVISIBLE);
             group_NoLogin.setVisibility(View.VISIBLE);
         }
@@ -104,6 +112,20 @@ public class UserFragment extends Fragment implements View.OnClickListener{
                 check_login();
                 break;
             }
+            case R.id.record:{
+                if(curUser == null)
+                    return ;
+                Intent intent = new Intent(getContext(), BorrowHistoryActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.change_info:{
+                if(curUser == null)
+                    return ;
+                Intent intent = new Intent(getContext(), ChangeInfoActivity.class);
+                startActivity(intent);
+                break;
+            }
         }
     }
 
@@ -121,5 +143,11 @@ public class UserFragment extends Fragment implements View.OnClickListener{
                 break;
             }
         }
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        check_login();
     }
 }

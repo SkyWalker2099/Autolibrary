@@ -4,11 +4,12 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <android.support.v7.widget.CardView
+        android:id="@+id/search_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="#ffffff"
         app:cardCornerRadius="5dp"
-        app:cardElevation="5dp"
+        app:cardElevation="2dp"
         android:layout_margin="10dp">
         <RelativeLayout
             android:layout_width="match_parent"
@@ -17,12 +18,15 @@
             android:focusable="true"
             android:focusableInTouchMode="true">
 
-            <EditText
+            <TextView
                 android:id="@+id/search"
                 android:background="#ffffff"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center_vertical"
                 android:padding="3dp"
+                android:hint="输入你要查找的书名或者作者"
+                android:textSize="15sp"
                 android:layout_marginStart="3dp"
                 android:layout_toStartOf="@+id/search_image" />
 
@@ -44,4 +48,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </com.amap.api.maps2d.MapView>
+
+
+
 </RelativeLayout>

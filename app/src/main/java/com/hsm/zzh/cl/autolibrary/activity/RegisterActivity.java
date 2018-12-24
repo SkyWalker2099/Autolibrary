@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.hsm.zzh.cl.autolibrary.R;
 import com.hsm.zzh.cl.autolibrary.info_api.MyUser;
 import com.hsm.zzh.cl.autolibrary.info_api.UserOperation;
+import com.hsm.zzh.cl.autolibrary.wheel.Pending;
 
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
@@ -72,6 +73,9 @@ public class RegisterActivity extends AppCompatActivity{
         UserOperation.sign_up(account, pwd, email, new SaveListener<MyUser>() {
             @Override
             public void done(MyUser myUser, BmobException e) {
+                Pending pending = new Pending(RegisterActivity.this);
+                pending.showProgressDialog();
+
                 if(e!=null){
                     String message = null;
                     switch(e.getErrorCode()) {
@@ -90,16 +94,19 @@ public class RegisterActivity extends AppCompatActivity{
                         }
                     }
                     Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
+
                     return ;
                 }
+                else {
+                    Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
+                    //返回成功信息给上一个页面
+                    Intent intent = new Intent();
+                    intent.putExtra("register_result", true);
+                    setResult(RESULT_OK, intent);
 
-                Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
-                //返回成功信息给上一个页面
-                Intent intent = new Intent();
-                intent.putExtra("register_result", true);
-                setResult(RESULT_OK, intent);
-
-                RegisterActivity.this.finish();
+                    RegisterActivity.this.finish();
+                }
+                pending.closeProgressDialog();
             }
         });
     }
